@@ -29,7 +29,7 @@ public class StockProfitFinder {
 
 		for (int indices = 1; indices < stockPrices.length; indices++) {
 
-			if (checkIfCurrentStockPriceIsLower(stockPrices, minStockPrice, indices)) {
+			if (currentStockPriceIsLower(stockPrices, minStockPrice, indices)) {
 				minStockPrice = stockPrices[indices];
 			}
 
@@ -42,7 +42,7 @@ public class StockProfitFinder {
 		return bestProfit;
 	}
 
-	private static boolean checkIfCurrentStockPriceIsLower(int[] stockPrices, int minStockPrice, int indices) {
+	private static boolean currentStockPriceIsLower(int[] stockPrices, int minStockPrice, int indices) {
 		return stockPrices[indices] < minStockPrice;
 	}
 }
