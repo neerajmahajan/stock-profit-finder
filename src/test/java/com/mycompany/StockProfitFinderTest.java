@@ -43,7 +43,7 @@ public class StockProfitFinderTest
     }
     
     @Test
-    public void testWhenStockPriceRemainConstantThroughTheDay()
+    public void testWhenStockPriceRemainConstantThroughoutTheDay()
     {
     	int[]stockPrices= {5,5,5,5,5,5,5};
     	int expectedProfit = 0;
@@ -69,8 +69,8 @@ public class StockProfitFinderTest
     @Test
     public void testWhenStockPriceConsistentlyWentUpDown()
     {
-    	int[]stockPrices= {10,5,15,7,20,7,7,7,7,7,20,2};
-    	int expectedProfit = 15;
+    	int[]stockPrices= {10,11,9,12,8,13,7,14,6,15};
+    	int expectedProfit = 9;
         assertEquals(expectedProfit, StockProfitFinder.findBestProfit(stockPrices) );
     }
     
